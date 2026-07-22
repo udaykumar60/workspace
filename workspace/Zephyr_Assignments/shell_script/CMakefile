@@ -1,0 +1,34 @@
+#which compiler
+TARGET = App
+
+CC=gcc
+
+CFLAGS = -c -fpic
+
+OFLAG = -o
+
+INSTALL = /usr/bin
+
+$TARGET: App.c add.0 sub.o mul.o div.o arith.h
+	$(CC) $< $(OFLAG) $@
+	@echo "App binary sucessfully build"
+
+add.o: add.c
+	$(CC) $(CFLAGS) $<
+
+sub.o:sub.c
+	$(CC) $(CFLAGS) $<
+
+mul.o:mul.c
+	$(CC) $(CFLAGS) $<
+
+div.o:div.c
+	$(CC) $(CFLAGS) $<
+
+
+INSTALL:$(TARGET)
+	cp -rf ./App $(INSTALL)
+	@echo " Application installed successfully at $(INSTALL) "
+
+clean:
+	rm -rf *.o App
