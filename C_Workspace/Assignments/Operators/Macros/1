@@ -1,0 +1,13 @@
+#include<stdio.h>
+#define Buffer_Size 5
+int main()
+{
+       //Create a macro-BUFFER_SIZE and use it to declare an integer array. Print all elements.//
+       int a[Buffer_Size];
+	printf("Enter %d values in the array \n",Buffer_Size);
+	for(int i=0;i<=Buffer_Size;i++)
+		scanf("%d",&a[i]);
+	for(int i=0;i<=Buffer_Size;i++)
+                printf("The elements in the array index %d are : %d \n",i,a[i]);
+	return 0;
+}

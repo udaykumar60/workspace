@@ -1,0 +1,25 @@
+//Write a function that returns a pointer to the largest element in an array. 
+#include<stdio.h>
+int* ptr(int a[])
+{
+	int *pt=0;
+	pt=&a[0];
+	for(int i=1;i<10;i++)
+	{
+		if( a[i] > *pt)
+		{
+			pt=&a[i];
+		} 		
+	}
+	return pt;
+}
+
+int main()
+{
+	int a[10]={741,852,963,789,456,123147,258,369,6786,45312};
+	int *largest=ptr(a);
+	printf("%p is the largest element in an array \n",&largest);
+	printf("\n");
+	return 0;
+}
+

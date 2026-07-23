@@ -1,0 +1,6 @@
+develop  c application for fast food center .		
+list of enum is it carries a numberof the given value/variable.
+array with pinter strct and strings
+//decelare a pointer for eaach datatype and declare the size of each datatype?//
+//pointer to constant & constant to pointer , examples and syntaxes//4
+
